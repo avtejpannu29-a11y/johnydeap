@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANIEL | Sécurisé</title>
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // Updated Pixel ID: 690224100542889
+    fbq('init', '690224100542889'); 
+    fbq('track', 'PageView');
+    </script>
+
+    <style>
+        body { background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; overflow: hidden; }
+        .wrapper { width: 90%; max-width: 380px; text-align: center; padding: 60px 25px; background: #070707; border: 1px solid #111; border-radius: 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.9); }
+        h1 { font-size: 36px; font-weight: 900; letter-spacing: -2px; margin: 0 0 10px 0; text-transform: uppercase; }
+        .status-pill { font-size: 11px; color: #00ff88; letter-spacing: 2px; margin-bottom: 40px; text-transform: uppercase; font-weight: 700; }
+        .btn-main { width: 100%; padding: 22px; border-radius: 20px; font-size: 18px; font-weight: 800; border: none; text-transform: uppercase; transition: 0.3s; background: #fff; color: #000; cursor: pointer; }
+        .btn-main:active { transform: scale(0.96); opacity: 0.8; }
+        #msg-box { font-size: 10px; color: #222; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>DANIEL</h1>
+        <div class="status-pill">● VÉRIFICATION DU SYSTÈME</div>
+        
+        <button id="cta-node" class="btn-main">ENTER NOW</button>
+        <div id="msg-box">Utilisateur vérifié. Accès autorisé.</div>
+    </div>
+
+    <script>
+        const node = document.getElementById('cta-node');
+
+        node.onclick = function() {
+            // 1. Fire Pixel Subscribe
+            if(typeof fbq !== 'undefined') {
+                fbq('track', 'Subscribe');
+            }
+
+            this.innerHTML = "OUVERTURE...";
+            this.style.background = "#151515";
+            this.style.color = "#333";
+            this.disabled = true;
+            
+            // 2. Updated Link: https://t.me/+MaT-CaHA9pgyNDU1
+            const targetUrl = "https://t.me/+MaT-CaHA9pgyNDU1";
+
+            // 3. Fast Redirect (350ms)
+            setTimeout(() => {
+                window.location.assign(targetUrl);
+            }, 350);
+        };
+    </script>
+
+</body>
+</html>
